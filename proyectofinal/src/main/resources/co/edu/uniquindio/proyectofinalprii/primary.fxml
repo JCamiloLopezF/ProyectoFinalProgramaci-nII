@@ -1,25 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.StackPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Button?>
-<?import javafx.geometry.Insets?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
 
-<StackPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.proyectofinalprii.PrimaryController">
+<StackPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.proyectofinalprii.PrimaryController" style="-fx-background-color: black;">
+    <!-- Importa el archivo CSS -->
+
     <children>
         <!-- ImageView para la imagen de fondo -->
-        <ImageView fitWidth="1920" fitHeight="1080"> <!-- Ajusta el tamaño según tus necesidades -->
-            <Image url="file:proyectofinal\Material\FondoApp_Mesa de trabajo 1.png"/>
-        </ImageView>
+
 
         <!-- Contenido original -->
         <VBox alignment="CENTER" spacing="20.0">
             <children>
-                <Label text="Primary View" />
-                <Button fx:id="primaryButton" text="Switch to Secondary View" onAction="#switchToSecondary"/>
+                <!-- Aplica la clase CSS al Label -->
+                <Label text="Bienvenido a YHAZ!" textAlignment="CENTER" translateY="-400.0">
+                   <font>
+                      <Font name="Jeztec Empire" size="120.0" />
+                   </font>
+                   <cursor>
+                      <Cursor fx:constant="DISAPPEAR" />
+                   </cursor>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.003921568859368563" green="0.8666666746139526" blue="0.9921568632125854" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+                </Label>
+                <Button fx:id="primaryButton" blendMode="SCREEN" onAction="#switchToSecondary" text="Iniciemos sesion" textFill="WHITE" translateY="200.0">
+                   <font>
+                      <Font name="BrandingPro" size="35.0" />
+                   </font>
+                </Button>
             </children>
             <padding>
                 <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

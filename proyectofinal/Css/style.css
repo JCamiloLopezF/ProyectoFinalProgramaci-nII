@@ -1,0 +1,6 @@
+/* style.css */
+.text-with-border {
+    -fx-text-fill: #000000; /* Color del texto */
+    -fx-stroke: #FFFFFF; /* Color del borde */
+    -fx-stroke-width: 2; /* Ancho del borde */
+}
