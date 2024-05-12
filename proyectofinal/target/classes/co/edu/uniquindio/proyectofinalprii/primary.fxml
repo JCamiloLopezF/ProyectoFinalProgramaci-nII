@@ -1,16 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Button?>
 <?import javafx.geometry.Insets?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.proyectofinalprii.PrimaryController">
-   <children>
-      <Label text="Primary View" />
-      <Button fx:id="primaryButton" text="Switch to Secondary View" onAction="#switchToSecondary"/>
-   </children>
-   <padding>
-      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-   </padding>
-</VBox>
+<StackPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.proyectofinalprii.PrimaryController">
+    <children>
+        <!-- ImageView para la imagen de fondo -->
+        <ImageView fitWidth="1920" fitHeight="1080"> <!-- Ajusta el tamaño según tus necesidades -->
+            <Image url="file:proyectofinal\Material\FondoApp_Mesa de trabajo 1.png"/>
+        </ImageView>
+
+        <!-- Contenido original -->
+        <VBox alignment="CENTER" spacing="20.0">
+            <children>
+                <Label text="Primary View" />
+                <Button fx:id="primaryButton" text="Switch to Secondary View" onAction="#switchToSecondary"/>
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </VBox>
+    </children>
+</StackPane>
