@@ -7,15 +7,17 @@ public class Tienda {
     private Gerente listaGerentes;
     private PedidoGerente listaPedidosGerente;
     private PedidoCliente listaPedidosCliente;
+    private Factura listaFacturas;
     
     public Tienda(String nombre, Registro listaRegistros, Cliente listaClientes, Gerente listaGerentes,
-            PedidoGerente listaPedidosGerente, PedidoCliente listaPedidosCliente) {
+            PedidoGerente listaPedidosGerente, PedidoCliente listaPedidosCliente, Factura listaFacturas) {
         this.nombre = nombre;
         this.listaRegistros = listaRegistros;
         this.listaClientes = listaClientes;
         this.listaGerentes = listaGerentes;
         this.listaPedidosGerente = listaPedidosGerente;
         this.listaPedidosCliente = listaPedidosCliente;
+        this.listaFacturas = listaFacturas;
     }
 
     public String getNombre() {
@@ -64,5 +66,13 @@ public class Tienda {
 
     public void setListaPedidosCliente(PedidoCliente listaPedidosCliente) {
         this.listaPedidosCliente = listaPedidosCliente;
+    }
+
+    public Factura getListaFacturas() {
+        return listaFacturas;
+    }
+
+    public void setListaFacturas(Factura listaFacturas) {
+        this.listaFacturas = listaFacturas;
     }
 }
